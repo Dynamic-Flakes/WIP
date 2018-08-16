@@ -192,8 +192,9 @@ const appRoutes: Routes = [
     ComparePasswordDirective,
     SetTransactionPinComponent,
     IntialSetupCompleteDialog,
+    RegisterSuccessDialog
   ],
-  entryComponents: [IntialSetupCompleteDialog],
+  entryComponents: [IntialSetupCompleteDialog, RegisterSuccessDialog],
   imports: [
     BrowserModule,
     RouterModule.forRoot(appRoutes),
