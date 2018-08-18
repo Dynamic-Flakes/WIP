@@ -65,6 +65,7 @@ import { HistoryComponent } from './vendor/my-transaction-history/history/histor
 import { ComparePasswordDirective } from './shared/compare-password.directive';
 import { SetTransactionPinComponent, IntialSetupCompleteDialog } from './kyc/set-transaction-pin/set-transaction-pin.component';
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { ProductCardComponent } from './shop/products/product-card/product-card.component';
 
 
 const appRoutes: Routes = [
@@ -192,6 +193,7 @@ const appRoutes: Routes = [
     ComparePasswordDirective,
     SetTransactionPinComponent,
     IntialSetupCompleteDialog,
+    ProductCardComponent,
   ],
   entryComponents: [IntialSetupCompleteDialog],
   imports: [

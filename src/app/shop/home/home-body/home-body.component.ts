@@ -1,4 +1,6 @@
+import { Product } from './../../../models/product';
 import { Component, OnInit, AfterViewInit } from '@angular/core';
+import { ProductService } from '../../../services/product.service';
 declare const jquery: any;
 declare const jQuery: any;
 declare const $: any;
@@ -9,17 +11,24 @@ declare const $: any;
   styleUrls: ['./home-body.component.css']
 })
 export class HomeBodyComponent implements OnInit, AfterViewInit {
+  products: Product[];
 
-  constructor() { }
+  constructor(public productService: ProductService) { }
 
   ngOnInit() {
-
+    this.productService.getProducts().subscribe(
+      products => {
+        this.productService.setAllProducts(products);
+        this.products = this.productService.getAllProducts();
+      },
+      err => console.log(err)
+    );
   }
 
   ngAfterViewInit() {
-
+    
     // New Arrival Tab View
-    $("#feature").owlCarousel({
+    $("#new-arrival").owlCarousel({
       itemsCustom: [
         [0, 1],
         [600, 2],

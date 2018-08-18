@@ -1,5 +1,8 @@
+import { Observable } from 'node_modules/rxjs';
 import { Router } from '@angular/router';
 import { Component, OnInit, AfterViewInit } from '@angular/core';
+import { Product } from '../../models/product';
+import { ProductService } from '../../services/product.service';
 declare const $: any;
 
 @Component({
@@ -8,11 +11,13 @@ declare const $: any;
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit, AfterViewInit {
+  public products: Observable<Product[]>;
 
-  constructor(public router: Router) {
+  constructor(public router: Router, public productService: ProductService) {
   }
 
-  ngOnInit() { }
+  ngOnInit() {
+  }
 
   ngAfterViewInit() {
     // this.ngOnInit();
