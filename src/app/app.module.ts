@@ -1,3 +1,4 @@
+import { ProductService } from './services/product.service';
 import { AuthService } from './services/auth.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -212,7 +213,7 @@ const appRoutes: Routes = [
   schemas: [
     CUSTOM_ELEMENTS_SCHEMA,
   ],
-  providers: [AuthService],
+  providers: [AuthService, ProductService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

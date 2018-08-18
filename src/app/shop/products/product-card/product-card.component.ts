@@ -8,11 +8,10 @@ import { Product } from '../../../models/product';
   styleUrls: ['./product-card.component.css']
 })
 export class ProductCardComponent implements OnInit {
-  @Input() product: any;
+  @Input() product: Product;
 
   constructor(public productService: ProductService) { }
 
   ngOnInit() {
   }
-
 }

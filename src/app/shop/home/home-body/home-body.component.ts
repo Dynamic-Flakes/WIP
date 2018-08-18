@@ -11,13 +11,14 @@ declare const $: any;
   styleUrls: ['./home-body.component.css']
 })
 export class HomeBodyComponent implements OnInit, AfterViewInit {
-  products: Product[];
+  products: any[];
 
   constructor(public productService: ProductService) { }
 
   ngOnInit() {
     this.productService.getProducts().subscribe(
       products => {
+        console.log(products);
         this.productService.setAllProducts(products);
         this.products = this.productService.getAllProducts();
       },
@@ -26,7 +27,7 @@ export class HomeBodyComponent implements OnInit, AfterViewInit {
   }
 
   ngAfterViewInit() {
-    
+
     // New Arrival Tab View
     $("#new-arrival").owlCarousel({
       itemsCustom: [
