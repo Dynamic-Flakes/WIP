@@ -1,6 +1,7 @@
 import { Product } from './../../../models/product';
 import { Component, OnInit, AfterViewInit } from '@angular/core';
 import { ProductService } from '../../../services/product.service';
+// import 'products' from './../../../../assets/data/products.json';
 declare const jquery: any;
 declare const jQuery: any;
 declare const $: any;

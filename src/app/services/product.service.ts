@@ -20,7 +20,7 @@ export class ProductService extends CachingService {
     super();
   }
 
-  setAllProducts(fetchedProducts: Product[]) {
+  setAllProducts(fetchedProducts: any[]) {
     this.allProducts = fetchedProducts;
   }
 
@@ -29,8 +29,7 @@ export class ProductService extends CachingService {
   }
 
   getProducts(): Observable<any> {
-    return this.http.get('../../assets/data/products.json').pipe(map(res => { return res }),
-      catchError(this.handleError));
+    return this.http.get('../../assets/data/products.json');
   }
 
   create(product) {

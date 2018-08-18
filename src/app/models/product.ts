@@ -12,6 +12,7 @@ export class Product {
         brand: string,
         location: string,
         quantity: number = 1,
-        price: number) { }
+        newPrice: number,
+        oldPrice: number) { }
 
 }
