@@ -109,4 +109,8 @@ export class HomeBodyComponent implements OnInit, AfterViewInit {
       pagination: false
     });
   }
+
+  // productsMethod(n: number, startFrom: number): number[] {
+  //   return Array.from(Array(n).keys());
+  // }
 }

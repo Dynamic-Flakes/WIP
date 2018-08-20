@@ -1,5 +1,5 @@
-<div class="">
-  <div class="product-layout col-xs-12">
+<span >
+  <div class="product-layout col-xs-12" *ngIf="even">
     <div class="product-thumb transition">
         <div class="image">
           <a routerLink="/shop/product-page"><img [src]="product.productImage" alt="iPhone" title="iPhone" class="img-responsive center-block" /></a>
@@ -32,7 +32,7 @@
       </div>
 </div>
 
-<div class="product-layout col-xs-12">
+<div class="product-layout col-xs-12" *ngIf="odd">
   <div class="product-thumb transition">
       <div class="image">
         <a routerLink="/shop/product-page"><img [src]="product.productImage" alt="iPhone" title="iPhone" class="img-responsive center-block" /></a>
@@ -64,4 +64,4 @@
       </div>
     </div>
 </div>
-</div>
+</span>

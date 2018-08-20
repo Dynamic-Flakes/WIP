@@ -8,7 +8,11 @@ import { Product } from '../../../models/product';
   styleUrls: ['./product-card.component.css']
 })
 export class ProductCardComponent implements OnInit {
+  @Input() products: Product;
+  @Input() i;
+  @Input() even;
   @Input() product: Product;
+  @Input() odd;
 
   constructor(public productService: ProductService) { }
 
